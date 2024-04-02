@@ -5,14 +5,14 @@ import ProductList from "./ProductList";
 const Home = () => {
   return (
     <div>
-      <div className='container mx-auto'>
+      <div className="container mx-auto">
         <Content />
-        <ProductList />
+        <ProductList title="Featured Products" />
       </div>
 
       <Banner />
-      <div className='container mx-auto'>
-        <ProductList />
+      <div className="container mx-auto">
+        <ProductList title="Popular Products" />
       </div>
     </div>
   );
