@@ -6,130 +6,118 @@ const DashBoard = (props: Props) => {
   return (
     <div>
       <>
-        <h3 className="text-lg font-semibold text-gray-900 dark:text-white text-center">
-          Add Product
-        </h3>
-        <p-toast />
-        {/* Modal body */}
-        <form className="flex justify-center">
-          <div className="grid gap-4 mb-4 sm:grid-cols-2 w-[500px]">
-            <div className="sm:col-span-3">
-              <label
-                htmlFor="title"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-              >
-                Product Name
-              </label>
-              <input
-                formcontrolname="title"
-                type="text"
-                name="title"
-                id="title"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                placeholder="Type product title"
-              />
+        <>
+          {/* component */}
+          <div className="bg-white p-8 rounded-md w-full">
+            <div className=" flex items-center justify-between pb-6">
               <div>
-                <small className="text-[red]">
-                  Product Name is not required
-                </small>
+                <h2 className="text-gray-600 font-semibold">Products Oder</h2>
+                <span className="text-xs">All products item</span>
               </div>
-            </div>
-            <div className="sm:col-span-3">
-              <label
-                htmlFor="image"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-              >
-                Product Image
-              </label>
-              <input
-                formcontrolname="image"
-                type="text"
-                name="image"
-                id="image"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                placeholder="Product brand"
-              />
-              <div>
-                <small className="text-[red]">Image is not required</small>
+              <div className="flex items-center justify-between">
+                <div className="flex bg-gray-50 items-center p-2 rounded-md">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5 text-gray-400"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                  <input
+                    className="bg-gray-50 outline-none ml-1 block "
+                    type="text"
+                    name=""
+                    id=""
+                    placeholder="search..."
+                  />
+                </div>
+                <div className="lg:ml-40 ml-10 space-x-8">
+                  <button className="bg-indigo-600 px-4 py-2 rounded-md text-white font-semibold tracking-wide cursor-pointer">
+                    Create
+                  </button>
+                </div>
               </div>
             </div>
             <div>
-              <label
-                htmlFor="price"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-              >
-                Product Price
-              </label>
-              <input
-                formcontrolname="price"
-                type="number"
-                name="price"
-                id="price"
-                className="bg-gray-50 border border-gray-300 w-100% text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                placeholder="Enter Product Price"
-              />
-              <div>
-                <small className="text-[red]">Price is not required</small>
+              <div className="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
+                <div className="inline-block min-w-full shadow rounded-lg overflow-hidden">
+                  <table className="min-w-full leading-normal">
+                    <thead>
+                      <tr>
+                        <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                          Product Name
+                        </th>
+                        <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                          Product Image
+                        </th>
+                        <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                          Price
+                        </th>
+                        <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                          Description
+                        </th>
+                        <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                          Action
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td className=" py-5 border-b border-gray-200 bg-white text-sm">
+                          <div className="flex items-center">
+                            <div className="flex-shrink-0 w-10 h-10"></div>
+                            <div className="ml-3">
+                              <p className="text-gray-900 whitespace-no-wrap">
+                                Vera Carpenter
+                              </p>
+                            </div>
+                          </div>
+                        </td>
+                        <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                          <p className="text-gray-900 whitespace-no-wrap">
+                            Admin
+                          </p>
+                        </td>
+                        <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                          <p className="text-gray-900 whitespace-no-wrap">
+                            Jan 21, 2020
+                          </p>
+                        </td>
+                        <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                          <p className="text-gray-900 whitespace-no-wrap">43</p>
+                        </td>
+                        <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                          <span className="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
+                            <span className="relative">Activo</span>
+                          </span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div className="px-5 py-5 bg-white border-t flex flex-col xs:flex-row items-center xs:justify-between          ">
+                    <span className="text-xs xs:text-sm text-gray-900">
+                      Showing 1 to 4 of 50 Entries
+                    </span>
+                    <div className="inline-flex mt-2 xs:mt-0">
+                      <button className="text-sm text-indigo-50 transition duration-150 hover:bg-indigo-500 bg-indigo-600 font-semibold py-2 px-4 rounded-l">
+                        Prev
+                      </button>
+                      &nbsp; &nbsp;
+                      <button className="text-sm text-indigo-50 transition duration-150 hover:bg-indigo-500 bg-indigo-600 font-semibold py-2 px-4 rounded-r">
+                        Next
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div>
-              <label
-                htmlFor="category"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-              >
-                Category
-              </label>
-              <select
-                formcontrolname="categoryId"
-                name="categoryId"
-                id="category"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-              >
-                <option></option>
-              </select>
-            </div>
-            <div className="sm:col-span-3">
-              <label
-                htmlFor="description"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-              >
-                Description
-              </label>
-              <textarea
-                formcontrolname="description"
-                id="description"
-                rows={4}
-                className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                placeholder="Write product description here"
-                name="description"
-                defaultValue={""}
-              />
-              <div>
-                <small className="text-[red]">
-                  Description is not required
-                </small>
-              </div>
-            </div>
-            <button
-              type="submit"
-              className="text-white justify-center inline-flex items-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
-            >
-              <svg
-                className="mr-1 -ml-1 w-6 h-6"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
-                  clipRule="evenodd"
-                />
-              </svg>
-              Create product
-            </button>
           </div>
-        </form>
+        </>
       </>
     </div>
   );

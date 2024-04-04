@@ -45,8 +45,8 @@ function App() {
           </Route>
           <Route path="/dashboard" Component={LayoutAdmin}>
             <Route path="" Component={DashBoard} />
-            <Route path="add_product" Component={AddProduct} />
-            <Route path="edit_product" Component={EditProduct} />
+            <Route path="addproduct" Component={AddProduct} />
+            <Route path="editproduct" Component={EditProduct} />
           </Route>
         </Routes>
       </BrowserRouter>
